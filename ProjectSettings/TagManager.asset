@@ -9,6 +9,7 @@ TagManager:
   - Prueba
   - Inicio
   - Enemigo
+  - FondoCarrito
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Suelo
   - Esfera
   - Carrito
-  - 
+  - Jugador
   - 
   - 
   - 
