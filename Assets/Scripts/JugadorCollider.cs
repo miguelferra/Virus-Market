@@ -11,13 +11,9 @@ public class JugadorCollider : MonoBehaviour
     public GameObject panel;
     public GameObject panelGameover;
     public GameObject jugador;
-    public GameObject panelTimer;
+    
 
-    //Reloj
-    float theTime = 0;
-    float speed = 1f;
-    bool isTiming = false;
-    public Text textoTimer;
+  
 
     // Start is called before the first frame update
     void Start()
@@ -28,15 +24,9 @@ public class JugadorCollider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isTiming)
-        {
-            theTime += Time.deltaTime * speed;
-            string segundos = (theTime % 60).ToString("00");
-            string minutos = Mathf.Floor((theTime % 3600) / 60).ToString("00");
-            textoTimer.text = minutos + ":" + segundos;
-        }
-
+       
     }
+
     void OnTriggerEnter(Collider objeto)
     {
 
@@ -54,14 +44,5 @@ public class JugadorCollider : MonoBehaviour
             jugador.active = false;
         }
     }
-    void OnTriggerExit(Collider col)
-    {
-        if (col.gameObject.tag == "Inicio")
-        {
-            panel.gameObject.SetActive(false);
-            col.gameObject.active = false;
-            panelTimer.active = true;
-            isTiming = true;
-        }
-    }
+    
 }

@@ -91,7 +91,7 @@ public class ControlCarrito : MonoBehaviour
                 sonidoCarrito.Stop();
                 estadoSonido = false;
             }
-            if (Input.GetKey("space"))
+            if (Input.GetKey("space") || Input.GetButton("Fire1"))
             {
                 rigidbody.AddForce(-brakeFactor * rigidbody.velocity);
             }

@@ -10,13 +10,15 @@ public class Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            PlayerPrefs.DeleteAll();
+        }
     }
 
     public void CargarNivel(string NombreNivel){
@@ -25,6 +27,7 @@ public class Script : MonoBehaviour
 
     public void Salir(){
         Application.Quit();
+        PlayerPrefs.DeleteAll();
         Debug.Log("Saliste del juego");
     }
 }
